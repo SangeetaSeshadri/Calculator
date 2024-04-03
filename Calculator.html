@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+	<!-- This is a link to the Bootstrap 4.5.2 stylesheet-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<!-- External StyleSheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+		<h4>Calculator</h4>
+        <div class="calculator">
+		<!-- This is an input field of type text with the id "display1" and the class "form-control". 
+		The "readonly" attribute is added to prevent users from editing the content of the input field. -->
+            <input type="text" id="display1" class="form-control" readonly>
+            <div class="keys">
+			<!--Using Bootstrap classes used to style a button elements.-->
+			<!-- 
+				The onclick attribute is used to specify a JavaScript function, clearDisplay() or display() 
+				to be executed when the associated element is clicked.-->
+                <button class="btn btn-secondary" onclick="clearDisplay()">AC</button>
+				 <button class="btn btn-secondary" onclick="backspace()">&#9003;</button>
+                <button class="btn btn-secondary" onclick="display('%')">%</button>
+                <button class="btn btn-secondary" onclick="display('**')">^</button>
+                <button class="btn btn-primary" onclick="display('/')">/</button>
+                <button class="btn btn-light" onclick="display('7')">7</button>
+                <button class="btn btn-light" onclick="display('8')">8</button>
+                <button class="btn btn-light" onclick="display('9')">9</button>
+                <button class="btn btn-primary" onclick="display('*')">*</button>
+                <button class="btn btn-light" onclick="display('4')">4</button>
+                <button class="btn btn-light" onclick="display('5')">5</button>
+                <button class="btn btn-light" onclick="display('6')">6</button>
+                <button class="btn btn-primary" onclick="display('-')">-</button>
+                <button class="btn btn-light" onclick="display('1')">1</button>
+                <button class="btn btn-light" onclick="display('2')">2</button>
+                <button class="btn btn-light" onclick="display('3')">3</button>
+                <button class="btn btn-primary" onclick="display('+')">+</button>
+                <button class="btn btn-light" onclick="display('0')">0</button>
+                <button class="btn btn-light" onclick="display('.')">.</button>
+                <button class="btn btn-success" onclick="calculate()">=</button>
+                <button class="btn btn-secondary" onclick="square()">x²</button>
+              
+            </div>
+        </div>
+    </div>
+	<!--external Javascript code-->
+    <script src="script.js"></script>
+</body>
+</html>
