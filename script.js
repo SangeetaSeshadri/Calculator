@@ -30,10 +30,15 @@ function calculate() {
 // Defining a function 'square' to calculate the square of the value entered in the display and update the display with the result
 function square() {
     let currentValue = parseFloat(d.value); // Parse the current value in the display to a floating-point number
-    // If the current value is a valid number, calculate its square and update the display with the result
-    if (!isNaN(currentValue)) {
+    let regex = /(^|\s)[0-9.]+($|\s)/; // Regular expression to match a number surrounded by whitespace or at the beginning/end of the string
+    // If the current value is a valid number (not adjacent to an operator), calculate its square and update the display with the result
+    if (!isNaN(currentValue) && regex.test(d.value)) {
         d.value = currentValue * currentValue;
     }
+	else
+	{
+		d.value = 'Error';
+	}
 }
 
 // Defining a function 'backspace' to remove the last character from the value in the display
